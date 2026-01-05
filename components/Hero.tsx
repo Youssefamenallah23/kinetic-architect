@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-accent/10 to-transparent opacity-40" />
                     <motion.div className="w-full h-full relative" style={{ transform: "translateZ(10px)" }}>
                         <img 
-                            src="./image/profile.png" 
+                            src="/image/profile.png" 
                             alt={HERO_TITLE} 
                             className="w-full h-full object-cover transition-all duration-700"
                             

@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     description: 'An event-driven DevOps agent that monitors microservices, detects crashes, and auto-generates code fixes. Features a Symbolic RAG (LLM-Backed Semantic Cache) using SQLite.',
     techStack: ['Python', 'n8n', 'Docker', 'Gemini API','SQLite','FastAPI'],
     metrics: '90% Cost Reduction',
-    imageUrl: './image/rfp.png',
+    imageUrl: '/image/rfp.png',
     year: '2025',
     link: 'https://github.com/Youssefamenallah23/sentinel'
   },
@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     description: 'Autonomous inbound sales agent using n8n for orchestration. Implemented Model Context Protocol (MCP) to verify services against local SQL databases and write back to CRMs.',
     techStack: ['n8n', 'Full Stack', 'MCP', 'Docker','Gemini API','FastAPI','SQLite'],
     metrics: 'Automated RFPs',
-    imageUrl: './image/sentinels.png',
+    imageUrl: '/image/sentinels.png',
     year: '2025',
     link: 'https://github.com/Youssefamenallah23/titanflow'
   },
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     description: 'Personalized well-being app featuring a RAG-based chatbot (Gemini + Astra DB). Secured via Clerk authentication with persistent vector data storage and AI-powered insights and Gamified analytics. \n Note: not responsive,project was mainly to implement RAG and test it with real data',
     techStack: ['Next.js', 'TypeScript', 'Astra DB', 'Clerk','Gemini API','RAG System','zod'],
     metrics: '92% Emotion Accuracy',
-    imageUrl: './image/mindcare.png',
+    imageUrl: '/image/mindcare.png',
     year: '2025',
     link: 'https://mind-care-ai-mindy.vercel.app/'
   },
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     description: 'Immersive 3D Portfolio v2 "An ultra-performant personal brand experience built to demonstrate advanced frontend engineering. Moving beyond a standard layout, I leveraged Three.js and GSAP to create a seamless, scroll-driven 3D narrative.',
     techStack: ['Vite', 'TypeScript', 'Tailwind CSS', 'Gsap' ,'ThreeJS'],
     metrics: 'Introduce Myself',
-    imageUrl: './image/portfolio.png',
+    imageUrl: '/image/portfolio.png',
     year: '2025',
     link: 'https://portfolio-youssef-amen-allah.vercel.app/'
   },
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     description: 'A vibrant web app for cocktail bars, featuring a modern animations using GSAP.',
     techStack: ['React', 'GSAP', 'Vite', 'JavaScript'],
     metrics: 'Modern Animations',
-    imageUrl: './image/mojito.png',
+    imageUrl: '/image/mojito.png',
     year: '2025',
     link: 'https://gsap-cocktail-beta.vercel.app/'
   },
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     description: 'a web app for hospitals with sms notification and admin dashboard',
     techStack: ['Next.js 15', 'React 19', 'Twilio', 'Appwrite'],
     metrics: 'SMS Notifications',
-    imageUrl: './image/carepulse.png',
+    imageUrl: '/image/carepulse.png',
     year: '2024',
     link: 'https://care-pulse-sms.vercel.app/'
   }
