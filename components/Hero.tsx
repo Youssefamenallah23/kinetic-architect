@@ -110,10 +110,10 @@ export const Hero: React.FC = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-accent/10 to-transparent opacity-40" />
                     <motion.div className="w-full h-full relative" style={{ transform: "translateZ(10px)" }}>
                         <img 
-                            src="./profile.png" 
+                            src="./image/profile.png" 
                             alt={HERO_TITLE} 
                             className="w-full h-full object-cover transition-all duration-700"
-                            onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"; }}
+                            
                         />
                     </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-t dark:from-black/40 from-indigo-900/20 via-transparent to-transparent pointer-events-none z-20" />
