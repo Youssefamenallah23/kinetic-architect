@@ -18,10 +18,10 @@ export const EDUCATION_DATA: Education[] = [
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
-  { id: 'exp1', role: 'AI Engineer', company: 'Novera', period: 'Current', description: 'Architected an AI-powered photo-matching system with InsightFace and PostgreSQL, while contributing to open-source LLM and inference work in a three-person engineering collective.', skills: ['InsightFace', 'PostgreSQL', 'LLM APIs'] },
+  { id: 'exp4', role: 'Freelance Digital Designer & Web Developer', company: 'Independent — hospitality clients, led by Elama Resto Café, M’saken', period: '2026', description: 'Designing digital menus, landing pages, and QR-code experiences for cafés. Elama Resto Café is the lead client, alongside ongoing work for other local hospitality businesses; deliverables include print-ready materials for in-venue use.', skills: ['Digital Menus', 'QR Experiences', 'Landing Pages', 'Print Production'] },
+  { id: 'exp1', role: 'AI Engineer', company: 'Novera', period: '2026', description: 'Architected an AI-powered photo-matching system with InsightFace and PostgreSQL, while contributing to open-source LLM and inference work in a three-person engineering collective.', skills: ['InsightFace', 'PostgreSQL', 'LLM APIs'] },
   { id: 'exp2', role: 'AI Engineering Intern', company: 'Mobelite', period: '2025', description: 'Designed a production RAG system for semantic search across 500+ company documents and evaluated chunking and embedding configurations against a precision@5 set.', skills: ['AstraDB', 'Gemini API', 'RAG Evaluation'] },
   { id: 'exp3', role: 'Freelance AI Engineer - Voice Automation', company: 'Independent', period: '2025', description: 'Designed and deployed an LLM-powered voice agent handling 10,000+ outbound calls per month at 99.5% uptime.', skills: ['Voice AI', 'Next.js', 'Supabase'] },
-  { id: 'exp4', role: 'Freelance Digital Designer', company: 'Elama Resto Café, M’saken', period: '2024 - 2025', description: 'Digitized the restaurant menu, designed landing-page content and QR-code materials, then prepared the print-ready assets for in-venue use.', skills: ['Menu Design', 'QR Systems', 'Landing Pages', 'Print Production'] },
 ];
 
 export const BLOG_DATA: BlogPost[] = [];
