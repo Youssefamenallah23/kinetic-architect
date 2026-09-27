@@ -10,7 +10,6 @@ import { Education } from './components/Education';
 import { Testimonials } from './components/Testimonials';
 import { Blog } from './components/Blog';
 import { Contact } from './components/Contact';
-import { AICommandBar } from './components/AICommandBar';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -38,12 +37,27 @@ export default function App() {
     }
   }, [isDark]);
 
+  useEffect(() => {
+    const targets = document.querySelectorAll<HTMLElement>('.section-shell, .hero-copy, .hero-aside, .tech-rail');
+    targets.forEach(target => target.classList.add('will-reveal'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(target => observer.observe(target));
+    return () => observer.disconnect();
+  }, []);
+
   const toggleTheme = () => {
     setIsDark(!isDark);
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-1000 ${isDark ? 'dark bg-void' : 'bg-gradient-to-b from-paper via-white to-indigo-50/50'} dark:text-white text-ink selection:bg-indigo-500/30 selection:text-indigo-200`}>
+    <div className={`min-h-screen ${isDark ? 'dark' : ''}`}>
       <Navigation toggleTheme={toggleTheme} isDark={isDark} isVisible={!isVaultOpen} />
       
       <main className="relative z-0">
@@ -69,7 +83,6 @@ export default function App() {
         <Contact />
       </main>
 
-      <AICommandBar />
       <Footer isDark={isDark} />
     </div>
   );
