@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
     <div className="page-width hero-layout">
       <div className="hero-copy">
         <p className="hero-name">Amen Allah Youssef <span>/ Sousse, Tunisia</span></p>
-        <h1>Making language systems <em>earn their answers.</em></h1>
+        <h1 className="hero-title">Making language systems <em>earn their answers.</em></h1>
         <p className="hero-summary">{HERO_SUBTITLE}</p>
         <div className="hero-actions">
           <button className="button-solid" onClick={() => goTo(NavigationSection.WORK)}>See selected work <ArrowDownRight size={17} /></button>
