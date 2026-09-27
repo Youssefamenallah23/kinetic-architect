@@ -1,112 +1,96 @@
-<div align="center">
+# The Kinetic Architect
 
-# ✨ The Kinetic Architect ✨
+<p align="center">
+  <img src="public/image/profile.png" alt="Amen Allah Youssef" width="260" />
+</p>
 
-### A Portfolio That Moves, Breathes, and Occasionally Shows Off
+<p align="center">
+  A minimalist personal portfolio for <strong>Amen Allah Youssef</strong>, an AI / ML Research Engineer based in Sousse, Tunisia.
+</p>
 
-![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-6.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23-FF0055?style=for-the-badge&logo=framer&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+<p align="center">
+  <a href="https://github.com/Youssefamenallah23">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/amen-allah-youssef-8685012bb/">LinkedIn</a> ·
+  <a href="mailto:youssefamenallah.contact@gmail.com">Email</a>
+</p>
 
-</div>
+<p align="center">
+  <img src="public/image/portfolio-hero.png" alt="The Kinetic Architect portfolio hero section" width="900" />
+</p>
 
----
+## Overview
 
-## 🎭 What Is This?
+The Kinetic Architect is a single-page portfolio built around a simple idea: technical work should be explained with the same care used to build it. It presents research systems, applied ML work, experience, education, and current GitHub projects in an editorial, low-distraction interface.
 
-This isn't just a portfolio. It's a **living, breathing digital experience** — crafted with obsessive attention to detail and an unhealthy love for smooth animations.
+The visual system deliberately avoids heavy shadows, glass effects, and blue-purple gradients. It uses warm paper tones, restrained green accents, serif-led typography, fine rules, and small purposeful interactions.
 
-Every hover, every scroll, every transition has been tuned to make visitors go *"oooh"* instead of just *"oh"*.
+## Architecture
 
----
-
-## 🛠️ The Tech Behind The Magic
-
-### ⚛️ React 19 + TypeScript
-The foundation. Type-safe components that don't break at 2 AM when you're pushing "one last fix" to production. TypeScript catches the bugs before your users do.
-
-### ⚡ Vite
-Because life's too short for slow build times. Hot module replacement so fast you'll think you imagined it. Vite makes development feel like the future.
-
-### 🎬 Framer Motion
-The secret sauce. Those silky-smooth page transitions? The cards that float when you hover? The elements that fade in as you scroll? All Framer Motion. It turns a static page into a cinematic experience.
-
-### 🎨 Tailwind CSS
-Utility-first CSS that makes styling feel like playing with LEGOs. Dark mode and light mode switch seamlessly thanks to Tailwind's `dark:` variants. No more fighting with CSS specificity at midnight.
-
-### 🤖 AI-Powered Command Bar
-Yes, there's an AI command bar powered by **Google's Gemini API**. Because why just read a portfolio when you can have a conversation with it?
-
-### 📧 EmailJS Integration
-The contact form actually works. No backend needed. Messages fly directly to the inbox like magic (or, you know, like EmailJS).
-
----
-
-## 🧩 Architecture Highlights
-
-```
-📁 components/
-├── 🦸 Hero.tsx          → The dramatic entrance
-├── 👤 About.tsx         → The story 
-├── 💼 Experience.tsx    → The receipts
-├── 🎓 Education.tsx     → The credentials
-├── 🖼️ ProjectCard2.tsx  → Projects that pop
-├── 📚 ArchiveGrid.tsx   → The complete works
-├── 💬 Testimonials.tsx  → The fan mail
-├── ✉️ Contact.tsx       → Slide into the DMs
-├── 🤖 AICommandBar.tsx  → The AI assistant
-├── 🔀 TechTicker.tsx    → Infinite scrolling flex
-└── 🧭 Navigation.tsx    → Smooth sailing
+```text
+App.tsx
+├── Navigation          Sticky navigation and responsive menu
+├── Hero                Positioning, résumé link, and primary calls to action
+├── TechTicker          One-line animated technical-stack rail
+├── About               Research focus and core capabilities
+├── Experience          Applied engineering and freelance work timeline
+├── ArchiveGrid         Curated featured work + live GitHub repository feed
+├── Education           Academic background
+├── Testimonials        Research-practice statement
+├── Blog                GitHub-first public-notes link
+├── Contact             EmailJS contact form and availability statement
+└── Footer              Social links
 ```
 
----
+### Project data and GitHub feed
 
-## 🚀 Run It Yourself
+- `constants.ts` contains the hand-curated featured projects and résumé-backed experience data.
+- `ArchiveGrid.tsx` fetches public repositories from the GitHub API in the browser.
+- The feed is intentionally restricted to the strongest relevant repositories, showing six initially and an **Open all projects** control for the remainder.
+- If GitHub is unavailable or rate-limited, the page keeps working and directs visitors to the GitHub profile.
 
-**Prerequisites:** Node.js (LTS recommended)
+## Tech stack
+
+- React 19
+- TypeScript
+- Vite
+- Framer Motion
+- Lucide React
+- EmailJS
+- Tailwind CDN utilities with a custom editorial CSS layer
+
+## Run locally
+
+Prerequisite: Node.js 20+.
 
 ```bash
-# Clone the repo
 git clone https://github.com/Youssefamenallah23/kinetic-architect.git
-
-# Install the goods
+cd kinetic-architect
 npm install
-
-# Set up your environment
-# Add your GEMINI_API_KEY to .env.local
-
-# Launch! 🚀
 npm run dev
 ```
 
-The app will be live at `http://localhost:5173`
+Open `http://localhost:5173`.
+
+## Environment variables
+
+The site works without email configuration, but the contact form needs these values in `.env.local`:
+
+```bash
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Profile
+
+Amen focuses on reliable LLM systems, hybrid retrieval, evaluation-first RAG, and applied model research. He is open to internships, software-engineering and AI/ML roles, freelance work, and research collaboration.
 
 ---
 
-## 🎨 Design Philosophy
-
-- **Motion with purpose** — Every animation exists for a reason (and that reason is to look cool)
-- **Dark mode first** — Because we respect your eyes at 3 AM
-- **Light mode too** — For the brave souls who code with curtains open
-- **Performance obsessed** — Animations stay buttery at 60fps
-- **Responsive everything** — Looks gorgeous from mobile to ultrawide
-
----
-
-## 📝 License
-
-Built with ☕ and questionable sleep schedules.
-
-Feel free to draw inspiration, but make it your own!
-
----
-
-<div align="center">
-
-**Made by AY** 
-
-
-
-</div>
+Built and maintained by [Amen Allah Youssef](https://github.com/Youssefamenallah23).
