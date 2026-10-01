@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
       <div className="hero-aside">
-        <img src="/image/profile.png" alt={HERO_TITLE} />
+        <img src="/image/profile.png" alt={HERO_TITLE} width={1024} height={1024} />
         <div><span>Currently</span><strong>Researching reliable RAG,<br />retrieval and model evaluation.</strong></div>
       </div>
     </div>

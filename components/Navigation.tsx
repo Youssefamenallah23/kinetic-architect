@@ -13,8 +13,8 @@ export const Navigation: React.FC<NavigationProps> = ({ isVisible }) => {
     <div className="page-width nav-inner">
       <button className="wordmark" onClick={() => scroll(NavigationSection.HERO)}>AAY<span>.</span></button>
       <div className="nav-links">{items.map(([label, id]) => <button key={id} onClick={() => scroll(id)}>{label}</button>)}<a href="/Amen_Allah_Youssef_Resume.pdf" target="_blank" rel="noreferrer">Résumé</a></div>
-      <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X size={20} /> : <Menu size={20} />}</button>
+      <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Toggle navigation" aria-expanded={open} aria-controls="nav-drawer">{open ? <X size={20} /> : <Menu size={20} />}</button>
     </div>
-    {open && <div className="nav-drawer">{items.map(([label, id]) => <button key={id} onClick={() => scroll(id)}>{label}</button>)}<a href="/Amen_Allah_Youssef_Resume.pdf" target="_blank" rel="noreferrer">Résumé</a></div>}
+    {open && <div className="nav-drawer" id="nav-drawer">{items.map(([label, id]) => <button key={id} onClick={() => scroll(id)}>{label}</button>)}<a href="/Amen_Allah_Youssef_Resume.pdf" target="_blank" rel="noreferrer">Résumé</a></div>}
   </nav>;
 };
